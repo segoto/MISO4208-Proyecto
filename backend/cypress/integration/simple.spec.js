@@ -122,3 +122,23 @@ context('Create daily task', () => {
   })
 });
 
+context('Equipment test', () => {
+
+  it('Correctly takes a weapon on and off', () => {
+    cy.get(':nth-child(2) > .nav-link').click();
+    cy.get('.nav > [href="/inventory/equipment"]').click();
+    cy.wait(500);
+    cy.get('span[class="item-content shop_weapon_warrior_0"]').click();
+    //cy.get('#\33 8512310-a1aa-4242-ac04-862e63c33fd6 > .item').click();
+    cy.wait(500);
+    cy.get('.inner-content > .btn').click();
+    cy.get('div[class="svg-icon color"]');
+    cy.wait(500);
+    cy.get('span[class="item-content shop_weapon_warrior_0"]').then($estrellitas => {
+      var equipmentWeapon = $estrellitas.get(0);
+      cy.wrap(equipmentWeapon).click();
+    })
+  })
+});
+
+
