@@ -8,10 +8,10 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET home page. */
-router.get('/prueba1', function(req, res, next) {
+router.get('/test', function(req, res, next) {
   res.render('index', { title: 'Express' });
   cypress.run({
-  spec: '../cypress/cypress/integration/simple.spec'
+    spec: './cypress/integration/simple.spec.js'
   })
   .then((results) => {
     console.log(results)
