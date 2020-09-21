@@ -12,13 +12,14 @@ router.get('/', function(req, res, next) {
 
 /* GET home page. */
 router.get('/test', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  // res.render('index', { title: 'Express' });
   cypress.run({
     spec: './cypress/integration/simple.spec.js'
   })
   .then((results) => {
     req.app.get('processing')();
     // console.log(results)
+    res.end(JSON.stringify(results))
   })
   .catch((err) => {
     console.error(err)
