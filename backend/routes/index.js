@@ -12,20 +12,21 @@ router.get('/', function (req, res, next) {
 })
 
 /* GET home page. */
-router.get('/test', function(req, res, next) {
+router.get('/test', function (req, res, next) {
   // res.render('index', { title: 'Express' });
-  cypress.run({
-    spec: './cypress/integration/simple.spec.js'
-  })
-  .then((results) => {
-    req.app.get('processing')();
-    // console.log(results)
-    res.end(JSON.stringify(results))
-  })
-  .catch((err) => {
-    console.error(err)
-  })
-});
+  cypress
+    .run({
+      spec: './cypress/integration/simple.spec.js',
+    })
+    .then((results) => {
+      req.app.get('processing')()
+      // console.log(results)
+      res.end(JSON.stringify(results))
+    })
+    .catch((err) => {
+      console.error(err)
+    })
+})
 
 router.get('/test-habitica-mobile', function (req, res, next) {
   const path = req.body.sdkPath
@@ -50,6 +51,8 @@ router.get('/test-habitica-mobile', function (req, res, next) {
   cd.on('close', (code) => {
     res.send('Exerciser Monkey process done.')
   })
+
+  req.app.get('processing')()
 })
 
 module.exports = router
