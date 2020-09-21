@@ -28,12 +28,24 @@ router.get('/test', function(req, res, next) {
 });
 
 router.get('/test-habitica-mobile', function (req, res, next) {
-  const emulatorPath = req.body.emulatorPath
+  const path = req.body.sdkPath
+  const avdName = req.body.avdName
+  const commands = `cd; ${path}emulator/emulator -avd ${avdName}; cd; cd ${path}platform-tools; ./adb shell monkey -p com.habitrpg.android.habitica -v 1000`
+  console.log(commands)
 
-  const cd = spawn(
-    `cd; ${emulatorPath}; cd; cd /Users/andydonoso/Library/Android/sdk/platform-tools; ls; ./adb shell monkey -p com.habitrpg.android.habitica -v 1000`,
-    { shell: true }
-  )
+  const cd = spawn(commands, { shell: true })
+
+  cd.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`)
+  })
+
+  cd.stderr.on('data', (data) => {
+    console.log(`stderr: ${data}`)
+  })
+
+  cd.on('error', (error) => {
+    console.log(`error: ${error.message}`)
+  })
 
   cd.on('close', (code) => {
     res.send('Exerciser Monkey process done.')
