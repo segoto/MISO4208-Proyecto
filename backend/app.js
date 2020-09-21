@@ -32,7 +32,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function (req, res, next) {
-  console.log("nueva petición");
   let Peticion = class {
     constructor(req, res, next) {
       this.req = req;
@@ -46,7 +45,6 @@ app.use(function (req, res, next) {
   }
   else{
     queue.enqueue(new Peticion(req,res,next));
-    console.log("encole");
   }
 })
 

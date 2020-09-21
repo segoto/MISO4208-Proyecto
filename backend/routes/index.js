@@ -6,8 +6,7 @@ const { spawn } = require('child_process')
 /* GET home page. */
 router.get('/', function (req, res, next) {
   // res.render('index', { title: 'Express' });
-  res.send({ key: 'holitas' })
-  // setTimeout(req.app.get('processing'), 5000);
+  res.send({ key: 'value' })
   req.app.get('processing')()
 })
 
@@ -19,9 +18,9 @@ router.get('/test', function (req, res, next) {
       spec: './cypress/integration/simple.spec.js',
     })
     .then((results) => {
-      req.app.get('processing')()
       // console.log(results)
       res.end(JSON.stringify(results))
+      req.app.get('processing')()
     })
     .catch((err) => {
       console.error(err)
