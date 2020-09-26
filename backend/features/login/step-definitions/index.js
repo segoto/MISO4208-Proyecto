@@ -39,3 +39,40 @@ Then('I expect to login successfully', () => {
   var characterName = $('.character-name').getText()
   expect(characterName).to.include('andrex491')
 })
+
+//Signup
+When('I open the signup screen', () => {
+  $('a=Get Started!').waitForExist(5000)
+  $('a=Get Started!').waitForDisplayed(5000)
+  $('a=Get Started!').click()
+})
+
+When(
+  /^I fill in (.*) and (.*) and (.*) and (.*)$/,
+  (username, email, password, cpassword) => {
+    var usernameInput = $('#usernameInput')
+    usernameInput.click()
+    usernameInput.keys(username ? username : '')
+
+    var emailInput = $('#emailInput')
+    emailInput.click()
+    emailInput.keys(email ? email : '')
+
+    var passwordInput = $('#passwordInput')
+    passwordInput.click()
+    passwordInput.keys(password ? password : '')
+
+    var cpasswordInput = $('#confirmPasswordInput')
+    cpasswordInput.click()
+    cpasswordInput.keys(cpassword ? cpassword : '')
+  }
+)
+
+When('I try to signup', () => {
+  $('button=Join Habitica').click()
+})
+
+Then(/^I expect to see (.*) below$/, (error) => {
+  expect($("div=Password confirmation doesn't match password.")).to.not.be
+    .undefined
+})
