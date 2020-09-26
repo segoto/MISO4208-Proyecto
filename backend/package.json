@@ -6,14 +6,23 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "@wdio/cli": "^6.5.2",
+    "chai": "^4.2.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "pug": "2.0.0-beta11",
+    "webdriverio": "^6.5.2"
   },
   "devDependencies": {
+    "@wdio/cucumber-framework": "^6.5.0",
+    "@wdio/local-runner": "^6.5.2",
+    "@wdio/selenium-standalone-service": "^6.4.7",
+    "@wdio/spec-reporter": "^6.4.7",
+    "@wdio/sync": "^6.5.0",
+    "cucumber": "^7.0.0-rc.0",
     "cypress": "^5.1.0"
   }
 }
