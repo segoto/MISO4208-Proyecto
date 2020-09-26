@@ -2,6 +2,7 @@ var express = require('express')
 var router = express.Router()
 const cypress = require('cypress')
 const { spawn } = require('child_process')
+const fs = require('fs')
 
 var MongoClient = require('mongodb').MongoClient
 const { databaseUser, databasePassword, databaseName } = require('../config')
@@ -173,10 +174,16 @@ router.get('/test-bdt-habitica-web', (req, res, next) => {
   })
 
   command.on('close', (code) => {
-    res.send('BDT process done.')
+    res.send('BDT Done')
   })
 
   req.app.get('processing')()
+})
+
+router.get('/results-bdt-habitica-web', (req, res, next) => {
+  let rawData = fs.readFileSync('backend/.tmp/json/signup-to-habitica.json')
+  let results = JSON.parse(rawData)
+  res.send(results)
 })
 
 module.exports = router

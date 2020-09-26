@@ -76,3 +76,9 @@ Then(/^I expect to see (.*) below$/, (error) => {
   expect($("div=Password confirmation doesn't match password.")).to.not.be
     .undefined
 })
+
+Then('I expect to signup successfully', () => {
+  $('#avatar-modal___BV_modal_body_').waitForExist(5000)
+  $('#avatar-modal___BV_modal_body_').waitForDisplayed(5000)
+  expect($('#avatar-modal___BV_modal_body_')).to.exist
+})
