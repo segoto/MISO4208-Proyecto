@@ -135,10 +135,38 @@ router.get('/test-habitica-mobile', function (req, res, next) {
   })
 
   cd.on('close', (code) => {
-    res.send('Exerciser Monkey process done.')
+    res.send({execution:'Exerciser Monkey process done.'})
   })
 
   req.app.get('processing')();
 })
+
+router.get('/test-my-expenses', function (req, res, next) {
+  const path = req.body.sdkPath
+  const avdName = req.body.avdName
+  const commands = `cd; ${path}emulator/emulator -avd ${avdName}; cd; cd ${path}platform-tools; ./adb shell monkey -p org.totschnig.myexpenses -v 1000`
+  console.log(commands)
+
+  const cd = spawn(commands, { shell: true })
+
+  cd.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`)
+  })
+
+  cd.stderr.on('data', (data) => {
+    console.log(`stderr: ${data}`)
+  })
+
+  cd.on('error', (error) => {
+    console.log(`error: ${error.message}`)
+  })
+
+  cd.on('close', (code) => {
+    res.send({execution:'Exerciser Monkey process done.'})
+  })
+
+  req.app.get('processing')();
+})
+
 
 module.exports = router
