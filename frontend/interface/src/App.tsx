@@ -11,6 +11,7 @@ function App() {
       { name: "Feature Testing", route: "http://localhost:3000/test_habitica_web"},
       { name: "Random Testing", route: "http://localhost:3000/random_habitica_web"},
       { name: "Registration Testing", route: "http://localhost:3000/test-bdt-habitica-web"},
+      { name:"BDT", route:"http://localhost:3000"},
     ]
   const testHabiticaMovil = [ 
       { name: "Random Testing", route: "http://localhost:3000/test-habitica-mobile"},
