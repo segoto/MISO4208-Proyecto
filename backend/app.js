@@ -4,22 +4,27 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var queue = require('./queue/queue')
+var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+var numTest = 0;
 
 function proccessing(){
   if(queue.length() > 0){
     let petition = queue.dequeue();
     petition.next();
   }
-  app.disable('state');
+  numTest -= 1;
+  //app.set('state', numTest);
 }
 
+app.use(cors());
+
 app.set('processing', proccessing)
-app.set('state', false);
+//app.set('state', 0);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -32,6 +37,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function (req, res, next) {
+  console.log("Recibido 200");
   let Peticion = class {
     constructor(req, res, next) {
       this.req = req;
@@ -39,11 +45,14 @@ app.use(function (req, res, next) {
       this.next = next;
     }
   };
-  if(!app.get('state')){
-    app.enable('state');
+  if(numTest<= 0){
+    // app.enable('state');
+    numTest += 1;
     next();
   }
   else{
+    console.log("En espera 200");
+    numTest += 1;
     queue.enqueue(new Peticion(req,res,next));
   }
 })
