@@ -11,21 +11,34 @@ router.get('/', function (req, res, next) {
 })
 
 /* GET home page. */
-router.get('/test', function (req, res, next) {
-  // res.render('index', { title: 'Express' });
-  cypress
-    .run({
-      spec: './cypress/integration/simple.spec.js',
-    })
-    .then((results) => {
-      // console.log(results)
-      res.end(JSON.stringify(results))
-      req.app.get('processing')()
-    })
-    .catch((err) => {
-      console.error(err)
-    })
-})
+router.get('/test_habitica_web', function(req, res, next) {
+  cypress.run({
+    spec: './cypress/integration/simple.spec.js'
+  })
+  .then((results) => {
+    req.app.get('processing')();
+    // console.log(results)
+    res.end(JSON.stringify(results))
+  })
+  .catch((err) => {
+    console.error(err)
+  })
+  //res.render('index', { title: 'Express' });
+});
+
+router.get('/random_habitica_web', function(req, res, next) {
+  cypress.run({
+    spec: './cypress/integration/random_test_web.spec.js'
+  })
+  .then((results) => {
+    req.app.get('processing')();
+    // console.log(results)
+    res.end(JSON.stringify(results))
+  })
+  .catch((err) => {
+    console.error(err)
+  })
+});
 
 router.get('/test-habitica-mobile', function (req, res, next) {
   const path = req.body.sdkPath
