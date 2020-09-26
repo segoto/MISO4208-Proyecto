@@ -10,8 +10,10 @@ type test = {
 type adProps = {
   name: string,
   imageLink: string,
-  testsAvailable: number
-  tests: test[]
+  testsAvailable: number,
+  tests: test[],
+  setLoading : Function,
+  setResults : Function,
 }
 
 function Card(props: adProps) {
@@ -19,11 +21,20 @@ function Card(props: adProps) {
 
   function sendPetition(testClicked: test) {
     console.log(testClicked.name);
+    props.setLoading(true);
     axios.get(testClicked.route, 
     { headers: {crossorigin:true}}).then( res =>  {
+      console.log(JSON.stringify(res.data));
+      props.setResults(JSON.stringify(res.data));
+      
       console.log(res);
+      props.setLoading(false);
     }
-    );
+    ).catch(err=>{
+      props.setResults("There was an error");
+      props.setLoading(false);
+      console.log(err);
+    });
   }
 
   const tests = props.tests;
