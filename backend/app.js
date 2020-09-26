@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var queue = require('./queue/queue')
+var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -17,6 +18,8 @@ function proccessing(){
   }
   app.disable('state');
 }
+
+app.use(cors());
 
 app.set('processing', proccessing)
 app.set('state', false);
