@@ -76,7 +76,7 @@ router.get('/test_habitica_web', function(req, res, next) {
   .then((results) => {
     req.app.get('processing')();
     // console.log(results)
-    res.end(JSON.stringify(results))
+    res.send(JSON.stringify(results))
     MongoClient.connect(uri,
         function(err, client) {
           if (err) {
@@ -98,7 +98,7 @@ router.get('/random_habitica_web', function(req, res, next) {
   .then((results) => {
     req.app.get('processing')();
     // console.log(results)
-    res.end(JSON.stringify(results));
+    res.send(JSON.stringify(results));
 
     MongoClient.connect(uri,
         function(err, client) {
