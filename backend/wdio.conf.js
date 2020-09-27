@@ -127,7 +127,7 @@ exports.config = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter.html
-  reporters: [/*'cucumberjs-json'*/ 'pretty'],
+  reporters: ['spec'],
 
   //
   // If you are using Cucumber you need to specify the location of your step definitions.
@@ -143,7 +143,7 @@ exports.config = {
     // <boolean> abort the run on first failure
     failFast: false,
     // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output (repeatable)
-    format: ['pretty', 'json:cucumber/results.json'],
+    format: ['pretty'],
     // <boolean> hide step definition snippets for pending steps
     snippets: true,
     // <boolean> hide source uris
