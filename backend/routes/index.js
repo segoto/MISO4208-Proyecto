@@ -134,7 +134,8 @@ router.get('/random_habitica_web', function (req, res, next) {
 router.get('/test-habitica-mobile', function (req, res, next) {
   const path = '/Users/andydonoso/Library/Android/sdk/'
   const avdName = 'Nexus_5_API_30'
-  const commands = `cd; ${path}emulator/emulator -avd ${avdName}; cd; cd ${path}platform-tools; ./adb shell monkey -p com.habitrpg.android.habitica -v 1000`
+  /* return seed*/
+  const commands = `cd; cd ${path}platform-tools; ./adb shell monkey -p com.habitrpg.android.habitica -v 1000`
   console.log(commands)
 
   const cd = spawn(commands, { shell: true })
