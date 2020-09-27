@@ -2,8 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c02d2f0-e216-43a0-a557-06c44cc2df61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.tmp/json/login-into-habitica.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.tmp/json/signup-to-habitica.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/cypress/videos/random_test_web.spec.js.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/features/login/login.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/features/login/step-definitions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/features/signup/signup.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/hs_err_pid27709.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/wdio.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/interface/src/components/fallback.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/interface/src/components/resutados.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Sprint 2/Expected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Sprint 2/HomePage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Sprint 2/Real.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Sprint 2/Tests.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/interface/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/interface/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/interface/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/interface/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/interface/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/interface/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/interface/src/components/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/interface/src/components/card.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +80,7 @@
       <workItem from="1601131115936" duration="1556000" />
       <workItem from="1601139541306" duration="620000" />
       <workItem from="1601224445161" duration="132000" />
-      <workItem from="1601236194145" duration="1858000" />
+      <workItem from="1601236194145" duration="2480000" />
     </task>
     <servers />
   </component>
