@@ -143,9 +143,18 @@ router.get('/test-habitica-mobile', function (req, res, next) {
   cd.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`)
   })
-
-  cd.stderr.on('data', (data) => {
-    console.log(`stderr: ${data}`)
+  .then((results) => {
+    req.app.get('processing')();
+    // console.log(results)
+    res.send(JSON.stringify(results))
+    MongoClient.connect(uri,
+        function(err, client) {
+          if (err) {
+            console.log(`Error: ${err}`);
+          }
+          let db = client.db('testing');
+          db.collection('tests').insertOne({type:'e2e', data: JSON.stringify(results)})
+    });
   })
 
   cd.on('error', (error) => {
@@ -169,9 +178,19 @@ router.get('/test-bdt-habitica-web', (req, res, next) => {
   command.stderr.on('data', (data) => {
     console.log(`stderr: ${data}`)
   })
+  .then((results) => {
+    req.app.get('processing')();
+    // console.log(results)
+    res.send(JSON.stringify(results));
 
-  command.on('error', (error) => {
-    console.log(`error: ${error.message}`)
+    MongoClient.connect(uri,
+        function(err, client) {
+          if (err) {
+            console.log(`Error: ${err}`);
+          }
+          let db = client.db('testing');
+          db.collection('tests').insertOne({type:'random', data: JSON.stringify(results)})
+        });
   })
 
   command.on('close', (code) => {

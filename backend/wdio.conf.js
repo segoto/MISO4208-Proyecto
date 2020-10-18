@@ -121,7 +121,7 @@ exports.config = {
   // Delay in seconds between the spec file retry attempts
   // specFileRetriesDelay: 0,
   //
-  // Whether or not retried specfiles should be retried immediately or deferred to the end of the queue
+  // Whether or not retried specfiles should be retried immediately or deferred to the end of the utils
   // specFileRetriesDeferred: false,
   //
   // Test reporter for stdout.
