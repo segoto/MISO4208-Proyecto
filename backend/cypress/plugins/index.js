@@ -15,7 +15,15 @@
 /**
  * @type {Cypress.PluginConfig}
  */
+const axiosScript = require('../../axiosScript');
+
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
+  on('task', {
+        'getRegistrationData': () => {
+            // CHANGED: return a promise so Cypress can wait for it
+            return axiosScript.getRegistrationData();
+        }
+    })
   // `config` is the resolved Cypress config
 }
