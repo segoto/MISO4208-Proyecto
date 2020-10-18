@@ -16,8 +16,8 @@ describe('Registering with existing username', () => {
 });
 
 describe('Habitica under monkeys', function() {
-    it('visits wikipedia and survives monkeys', function() {
-        randomEvent(10);
+    it('visits habitica and survives monkeys', function() {
+        randomEvent(100000);
     })
 })
 

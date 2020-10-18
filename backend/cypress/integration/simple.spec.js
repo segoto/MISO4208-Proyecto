@@ -1,12 +1,23 @@
+const axios = require('axios');
+const axiosMain = axios.create();
+window.axiosMain = axiosMain;
+
+beforeEach(function() {
+  cy.task('getRegistrationData').then( res => {
+    registration = res.data
+  });
+});
+
 context('Registering with existing username', () => {
 
-  it('makes a correct login attemp', () => {
+  it('makes an incorrect login attemp', () => {
     cy.visit('https://habitica.com/static/home')
     cy.get('#usernameInput').type('danyalej').should('have.value', 'danyalej');
     cy.get('[type="email"]').type('da.benavides@uniandes.edu.co', 'da.benavides@uniandes.edu.co')
     cy.get('input[type="password"]:first').type('secretpassword');
     cy.get('input[type="password"]:last').type('secretpassword');
     cy.get('.form > .btn').click();
+
   })
 });
 
@@ -14,6 +25,7 @@ context('Login Tests', () => {
 
   it('makes a correct login attemp', () => {
     cy.visit('https://habitica.com/static/home')
+
     cy.get('.login-button').click();
 
     cy.wait(500);
@@ -105,8 +117,8 @@ context('Create daily task', () => {
     cy.get('#create-task-btn').click();
     cy.get('.create-task-area > .d-flex > :nth-child(2)').click();
     cy.wait(500);
-    cy.get(':nth-child(2) > .form-control').type('Skincare', {delay: 100}).should('have.value', 'Skincare');
-    cy.get('.mb-0 > .form-control').type('I follow my skincare regimen', {delay: 100}).should('have.value', 'I follow my skincare regimen');
+    cy.get(':nth-child(2) > .form-control').type(registration.title, {delay: 100})
+    cy.get('.mb-0 > .form-control').type(registration.notes, {delay: 100}).
     cy.get('.inline-edit-input').type('Cleansing', {delay: 100}).should('have.value', 'Cleansing');
     cy.get('.inline-edit-input').type('{enter}');
     cy.wait(500);
