@@ -4,8 +4,8 @@ context('Registering with existing username', () => {
     cy.visit('https://habitica.com/static/home')
     cy.get('#usernameInput').type('danyalej').should('have.value', 'danyalej');
     cy.get('[type="email"]').type('da.benavides@uniandes.edu.co', 'da.benavides@uniandes.edu.co')
-    cy.get('[placeholder="Password"]').type('secretpassword');
-    cy.get('[placeholder="Confirm Password"]').type('secretpassword');
+    cy.get('input[type="password"]:first').type('secretpassword');
+    cy.get('input[type="password"]:last').type('secretpassword');
     cy.get('.form > .btn').click();
   })
 });
@@ -16,6 +16,7 @@ context('Login Tests', () => {
     cy.visit('https://habitica.com/static/home')
     cy.get('.login-button').click();
 
+    cy.wait(500);
     cy.get('#usernameInput').type('da.benavides@uniandes.edu.co').should('have.value', 'da.benavides@uniandes.edu.co');
     cy.get('#passwordInput').type('xedjes-jAnxid-xetji0');
 
@@ -28,23 +29,23 @@ context('Unsuccesfully creates test', () => {
   it('Checks for alert, not enough Gems and Category', () => {
     cy.get(':nth-child(7) > .nav-link').click();
 
-    cy.contains('Create Challenge', {timeout: 1000}).click();
+    cy.get('.create-challenge-button', {timeout: 1000}).click();
     cy.wait(500);
     var name="What is your Challenge name?";
     cy.get(`input[placeholder="${name}"]`, {timeout: 2000}).type('meditation', {delay: 200}).should('have.value', 'meditation');
-;
+
 
     var shortName="What short tag should be used to identify your Challenge?";
     cy.get(`input[placeholder="${shortName}"]`, {timeout: 2000}).type('meditation', {delay: 200}).should('have.value', 'meditation');
-;
+
 
     var summary="Write a short description advertising your Challenge to other Habiticans. What is the main purpose of your Challenge and why should people join it? Try to include useful keywords in the description so that Habiticans can easily find it when they search!";
     cy.get(`textarea[placeholder="${summary}"]`, {timeout: 2000}).type('meditation', {delay: 200}).should('have.value', 'meditation');
-;
+
 
     var description="Use this section to go into more detail about everything that Challenge participants should know about your Challenge.";
     cy.get(`textarea[placeholder="${description}"]`, {timeout: 2000}).type('meditation', {delay: 200}).should('have.value', 'meditation');
-;
+
 
     cy.get('#challenge-modal___BV_modal_body_ > div > div:nth-child(5) > select').select('00000000-0000-4000-A000-000000000000');
     cy.wait(500);
@@ -70,6 +71,7 @@ context('Login Tests', () => {
     cy.visit('https://habitica.com/static/home')
     cy.get('.login-button').click();
 
+    cy.wait(500);
     cy.get('#usernameInput').type('da.benavides@uniandes.edu.co').should('have.value', 'da.benavides@uniandes.edu.co');
     cy.get('#passwordInput').type('xedjes-jAnxid-xetji0');
 
