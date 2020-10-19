@@ -14,7 +14,7 @@ Scenario Outline: Registration failed with invalid inputs
         | username  | email | password | cpassword | error                     |
         |           |       |          |           | Missing username. Missing email. Missing password.  |
         |           | andy.donoso1@gmail.com |          |           | Missing username. Missing password.  |
-        | jkadjkwah | andy.donoso1@gmail.com | jahjkawhdjhjkhwd |           | Password confirmation doesn't match password.  |
+        | jkadjkwah | andy.donoso1@gmail.com | jahjkawhdjhjkhwd | dwdhjd | Password confirmation doesn't match password.  |
         | jkadjkwah | andy.donoso1@gmail.com | jahjkawhdjhjkhwd | jahjkawhdjhjkhwd | Email address is already used in an account.  |
 
 Scenario Outline: Registration can't be submitted because of invalid inputs
