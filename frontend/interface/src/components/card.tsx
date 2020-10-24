@@ -25,13 +25,17 @@ function Card(props: adProps) {
     axios.get(testClicked.route, 
     { headers: {crossorigin:true}}).then( res =>  {
       console.log(JSON.stringify(res.data));
-      props.setResults(JSON.stringify(res.data));
+      props.setResults((prevResults: any)=>{
+        const data = [...prevResults];
+        data.push(res.data);
+        return data;
+      });
       
       console.log(res);
       props.setLoading(false);
     }
     ).catch(err=>{
-      props.setResults("There was an error");
+      
       props.setLoading(false);
       console.log(err);
     });

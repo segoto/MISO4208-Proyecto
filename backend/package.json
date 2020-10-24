@@ -21,7 +21,8 @@
     "nodemon": "^2.0.4",
     "pug": "2.0.0-beta11",
     "resemblejs": "^3.2.5",
-    "webdriverio": "^6.5.2"
+    "webdriverio": "^6.5.2",
+    "cypress": "^5.1.0"
   },
   "devDependencies": {
     "@wdio/cucumber-framework": "^6.5.0",

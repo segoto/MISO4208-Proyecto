@@ -17,7 +17,7 @@
  */
 const fs = require('fs');
 var i = 1;
-const axiosScript = require('../../axiosScript');
+//const axiosScript = require('../../axiosScript');
 
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
@@ -41,10 +41,10 @@ module.exports = (on, config) => {
         })
     });
 
-  on('task', {
-        'getRegistrationData': () => {
-            // CHANGED: return a promise so Cypress can wait for it
-            return axiosScript.getRegistrationData();
-        }
-    })
+//   on('task', {
+//         'getRegistrationData': () => {
+//             // CHANGED: return a promise so Cypress can wait for it
+//             return axiosScript.getRegistrationData();
+//         }
+//     })
 }

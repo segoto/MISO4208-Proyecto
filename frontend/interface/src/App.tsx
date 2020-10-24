@@ -6,7 +6,7 @@ import ShowResults from './components/resutados';
 
 function App() {
   const [loading, setLoading] = useState(false);
-  const [results, setResults]  = useState<any>("Result Please execute a test");
+  const [results, setResults]  = useState([]);
   const testHabiticaWeb = [ 
       { name: "Feature Testing", route: "http://localhost:3000/test_habitica_web"},
       { name: "Random Testing", route: "http://localhost:3000/random_habitica_web"},

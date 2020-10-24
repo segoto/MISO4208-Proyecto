@@ -170,12 +170,11 @@ router.get('/test-habitica-mobile', function (req, res, next) {
 
 router.get('/test-bdt-habitica-web', (req, res, next) => {
   const command = spawn('npx wdio run wdio.conf.js', { shell: true })
-
   command.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`)
   })
-
   command.stderr.on('data', (data) => {
+
     console.log(`stderr: ${data}`)
   })
   .then((results) => {
@@ -192,7 +191,7 @@ router.get('/test-bdt-habitica-web', (req, res, next) => {
           db.collection('tests').insertOne({type:'random', data: JSON.stringify(results)})
         });
   })
-
+  
   command.on('close', (code) => {
     res.send({ execution: 'BDT process done.' })
   })
@@ -201,7 +200,7 @@ router.get('/test-bdt-habitica-web', (req, res, next) => {
 })
 
 router.get('/results-bdt-habitica-web', (req, res, next) => {
-  let rawData = fs.readFileSync('backend/.tmp/json/signup-to-habitica.json')
+  let rawData = fs.readFileSync('../backend/.tmp/json/signup-to-habitica.json')
   let results = JSON.parse(rawData)
   res.send(results)
 })
