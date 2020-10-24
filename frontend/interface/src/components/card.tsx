@@ -14,20 +14,28 @@ type adProps = {
   tests: test[],
   setLoading : Function,
   setResults : Function,
+  setBtnVrtTest: Function
 }
 
 function Card(props: adProps) {
 
 
   function sendPetition(testClicked: test) {
-    console.log(testClicked.name);
     props.setLoading(true);
+
+    if(testClicked.name !== 'VRT'){
+      props.setBtnVrtTest(false)
+    }
+
     axios.get(testClicked.route, 
     { headers: {crossorigin:true}}).then( res =>  {
-      console.log(JSON.stringify(res.data));
+
+      if(testClicked.name === 'VRT'){
+        props.setBtnVrtTest(true)
+      }
+
       props.setResults(JSON.stringify(res.data));
-      
-      console.log(res);
+
       props.setLoading(false);
     }
     ).catch(err=>{

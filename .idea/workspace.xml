@@ -2,26 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c02d2f0-e216-43a0-a557-06c44cc2df61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/.tmp/json/login-into-habitica.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.tmp/json/signup-to-habitica.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/cypress/videos/random_test_web.spec.js.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/features/login/login.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/features/login/step-definitions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/features/signup/signup.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/hs_err_pid27709.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/wdio.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/interface/src/components/fallback.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/interface/src/components/resutados.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Sprint 2/Expected.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Sprint 2/HomePage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Sprint 2/Real.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Sprint 2/Tests.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/cypress.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cypress.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/cypress/plugins/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cypress/plugins/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/vrt.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/vrt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/base_images/img1.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/base_images/img1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/base_images/img10.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/base_images/img10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/base_images/img2.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/base_images/img2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/base_images/img3.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/base_images/img3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/base_images/img4.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/base_images/img4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/base_images/img5.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/base_images/img5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/base_images/img6.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/base_images/img6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/base_images/img7.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/base_images/img7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/base_images/img8.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/base_images/img8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/base_images/img9.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/base_images/img9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/interface/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/interface/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/interface/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/interface/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/interface/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/interface/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/interface/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/interface/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/interface/src/components/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/interface/src/components/card.tsx" afterDir="false" />
     </list>
@@ -51,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pruebas automatica/visual-regression/frontend/src/App.js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,7 +59,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\teo-1\Desktop\MISO4208-Proyecto\frontend\interface\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\teo-1\Desktop\MISO4208-Proyecto\backend\public\images" />
+      <recent name="C:\Users\teo-1\Desktop\MISO4208-Proyecto\backend\utils\mod_images" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -80,7 +86,17 @@
       <workItem from="1601131115936" duration="1556000" />
       <workItem from="1601139541306" duration="620000" />
       <workItem from="1601224445161" duration="132000" />
-      <workItem from="1601236194145" duration="2480000" />
+      <workItem from="1601236194145" duration="2579000" />
+      <workItem from="1601251588959" duration="763000" />
+      <workItem from="1601254093760" duration="9000" />
+      <workItem from="1601336683047" duration="97000" />
+      <workItem from="1601420819280" duration="993000" />
+      <workItem from="1602982825940" duration="2795000" />
+      <workItem from="1602987993881" duration="8117000" />
+      <workItem from="1603051978549" duration="15105000" />
+      <workItem from="1603142951921" duration="26000" />
+      <workItem from="1603403602224" duration="8764000" />
+      <workItem from="1603505483670" duration="2553000" />
     </task>
     <servers />
   </component>
@@ -88,33 +104,33 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="542" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601098403402">
+    <state x="542" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603071779806">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="542" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1601098403402" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601224574162">
+    <state x="542" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1603071779806" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1603434505428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601224574162" />
-    <state width="1515" height="91" key="GridCell.Tab.0.bottom" timestamp="1601099455835">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603434505428" />
+    <state width="1515" height="91" key="GridCell.Tab.0.bottom" timestamp="1603435449731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="91" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601099455835" />
-    <state width="1515" height="91" key="GridCell.Tab.0.center" timestamp="1601099455835">
+    <state width="1515" height="91" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603435449731" />
+    <state width="1515" height="91" key="GridCell.Tab.0.center" timestamp="1603435449731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="91" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601099455835" />
-    <state width="1515" height="91" key="GridCell.Tab.0.left" timestamp="1601099455835">
+    <state width="1515" height="91" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603435449731" />
+    <state width="1515" height="91" key="GridCell.Tab.0.left" timestamp="1603435449731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="91" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601099455835" />
-    <state width="1515" height="91" key="GridCell.Tab.0.right" timestamp="1601099455835">
+    <state width="1515" height="91" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603435449731" />
+    <state width="1515" height="91" key="GridCell.Tab.0.right" timestamp="1603435449731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="91" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601099455835" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1600625756760">
+    <state width="1515" height="91" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603435449731" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1603434204902">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600625756760" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603434204902" />
   </component>
 </project>
