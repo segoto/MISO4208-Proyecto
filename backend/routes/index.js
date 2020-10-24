@@ -203,10 +203,6 @@ router.get('/test-bdt-habitica-web', (req, res, next) => {
   req.app.get('processing')()
 })
 
-router.get('/results-bdt-habitica-web', (req, res, next) => {
-  req.app.get('processing')()
-})
-
 router.get('/test-my-expenses', function (req, res, next) {
   const path = '/Users/andydonoso/Library/Android/sdk/'
   const avdName = 'Nexus_5_API_30'
