@@ -5,7 +5,6 @@ import {
   Grid,
   List,
   ListItem,
-  Divider,
   ListItemText,
   Typography,
 } from "@material-ui/core";
@@ -66,12 +65,24 @@ const DetailResults = (props: Props) => {
         </Grid>
       ) : isFeature ? (
         <Grid container justify="center">
+        <Grid item xs={12}>
         <Typography>Total Failed: {props.row.data.totalFailed}</Typography>
+        </Grid>
+        <Grid item xs={12}>
         <Typography>Total Passed: {props.row.data.totalPassed}</Typography>
+        </Grid>
+        <Grid item xs={12}>
         <Typography>Total Pending: {props.row.data.totalPending}</Typography>
+        </Grid>
+        <Grid item xs={12}>
         <Typography>Total Skipped: {props.row.data.totalSkipped} </Typography>
+        </Grid>
+        <Grid item xs={12}>
         <Typography>Total Suites: {props.row.data.totalSuites}</Typography>
+        </Grid>
+        <Grid item xs={12}>
         <Typography>Total Tests: {props.row.data.totalTests}</Typography>
+        </Grid>
         </Grid>
       ) : (
         <div></div>
