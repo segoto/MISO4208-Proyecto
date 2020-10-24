@@ -4,6 +4,7 @@ var router = express.Router()
 const fs = require('fs')
 const fetch = require('node-fetch')
 const randomGenerator = require('../random-generators/random-login')
+const path = require('path')
 
 router.get('/bdt-login', function (req, res, next) {
   let fileContent = randomGenerator.generateRandomFile()
@@ -17,7 +18,11 @@ router.get('/bdt-login', function (req, res, next) {
 
   fetch('http://localhost:3001/test-bdt-habitica-web')
     .then(() => {
-      res.send('Done')
+      let rawData = fs.readFileSync(
+        path.resolve('.tmp/json/signup-to-habitica.json')
+      )
+      let results = JSON.parse(rawData)
+      res.send(results)
     })
     .catch((error) => {
       console.error(error)
