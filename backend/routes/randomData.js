@@ -10,7 +10,7 @@ router.get('/bdt-login', function (req, res, next) {
   let fileContent = randomGenerator.generateRandomFile()
 
   fs.writeFileSync(
-    '/Users/andydonoso/Desktop/UNIVERSIDAD/SEMESTRE 7/Pruebas Automáticas/MISO4208-Proyecto/backend/features/login/login.feature',
+    'C:/Users/juseg/Documents/pruebas/MISO4208-Proyecto/backend/features/login/login.feature',
     fileContent
   )
 
