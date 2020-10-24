@@ -172,12 +172,11 @@ router.get('/test-habitica-mobile', function (req, res, next) {
 
 router.get('/test-bdt-habitica-web', (req, res, next) => {
   const command = spawn('npx wdio run wdio.conf.js', { shell: true })
-
   command.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`)
   })
-
   command.stderr.on('data', (data) => {
+
     console.log(`stderr: ${data}`)
   })
   /*.then((results) => {
