@@ -2,7 +2,6 @@ var express = require('express')
 var router = express.Router()
 const cypress = require('cypress')
 const { spawn } = require('child_process')
-const fs = require('fs')
 
 var MongoClient = require('mongodb').MongoClient
 const { databaseUser, databasePassword, databaseName } = require('../config')
@@ -140,22 +139,25 @@ router.get('/test-habitica-mobile', function (req, res, next) {
 
   const cd = spawn(commands, { shell: true })
 
-  cd.stdout.on('data', (data) => {
-    console.log(`stdout: ${data}`)
-  })
-  .then((results) => {
-    req.app.get('processing')();
-    // console.log(results)
-    res.send(JSON.stringify(results))
-    MongoClient.connect(uri,
-        function(err, client) {
-          if (err) {
-            console.log(`Error: ${err}`);
-          }
-          let db = client.db('testing');
-          db.collection('tests').insertOne({type:'e2e', data: JSON.stringify(results)})
-    });
-  })
+  cd.stdout
+    .on('data', (data) => {
+      console.log(`stdout: ${data}`)
+    })
+    .then((results) => {
+      req.app.get('processing')()
+      // console.log(results)
+      res.send(JSON.stringify(results))
+      MongoClient.connect(uri, function (err, client) {
+        if (err) {
+          console.log(`Error: ${err}`)
+        }
+        let db = client.db('testing')
+        db.collection('tests').insertOne({
+          type: 'e2e',
+          data: JSON.stringify(results),
+        })
+      })
+    })
 
   cd.on('error', (error) => {
     console.log(`error: ${error.message}`)
@@ -177,21 +179,23 @@ router.get('/test-bdt-habitica-web', (req, res, next) => {
 
     console.log(`stderr: ${data}`)
   })
-  .then((results) => {
-    req.app.get('processing')();
-    // console.log(results)
-    res.send(JSON.stringify(results));
+  /*.then((results) => {
+      req.app.get('processing')()
+      // console.log(results)
+      res.send(JSON.stringify(results))
 
-    MongoClient.connect(uri,
-        function(err, client) {
-          if (err) {
-            console.log(`Error: ${err}`);
-          }
-          let db = client.db('testing');
-          db.collection('tests').insertOne({type:'random', data: JSON.stringify(results)})
-        });
-  })
-  
+      MongoClient.connect(uri, function (err, client) {
+        if (err) {
+          console.log(`Error: ${err}`)
+        }
+        let db = client.db('testing')
+        db.collection('tests').insertOne({
+          type: 'random',
+          data: JSON.stringify(results),
+        })
+      })
+    })*/
+
   command.on('close', (code) => {
     res.send({ execution: 'BDT process done.' })
   })
@@ -200,9 +204,7 @@ router.get('/test-bdt-habitica-web', (req, res, next) => {
 })
 
 router.get('/results-bdt-habitica-web', (req, res, next) => {
-  let rawData = fs.readFileSync('../backend/.tmp/json/signup-to-habitica.json')
-  let results = JSON.parse(rawData)
-  res.send(results)
+  req.app.get('processing')()
 })
 
 router.get('/test-my-expenses', function (req, res, next) {

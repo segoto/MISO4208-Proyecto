@@ -25,10 +25,18 @@ function Card(props: adProps) {
 
     axios.get(testClicked.route, 
     { headers: {crossorigin:true}}).then( res =>  {
-      console.log(JSON.stringify(res.data));
+      
       props.setResults((prevResults: any)=>{
         const data = [...prevResults];
-        let pushingData = {application: props.name, typeOfTest: testClicked.name, performedDate: (new Date('05 October 2011 14:48 UTC')).toISOString(), data: res.data  }
+        let processData = res.data;
+        console.log(processData)
+        console.log(processData.length)
+        if(testClicked.name ==="BDT"){
+          
+          processData = processData[processData.length-1];
+          console.log(processData);
+        }
+        let pushingData = {application: props.name, typeOfTest: testClicked.name, performedDate: (new Date('05 October 2011 14:48 UTC')).toISOString(), data: processData  }
         data.push(pushingData);
         return data;
       });

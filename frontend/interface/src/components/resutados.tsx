@@ -27,7 +27,7 @@ export interface Row {
     performedDate: string;
     typeOfTest: string;
     application: string;
-    data: Object;
+    data: any;
 }
 const ShowResults = (props : results)=>{
     const [title, setTitle] = useState("")
