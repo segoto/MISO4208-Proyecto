@@ -31,12 +31,12 @@ function Card(props: adProps) {
         let processData = res.data;
         console.log(processData)
         console.log(processData.length)
-        if(testClicked.name ==="BDT"){
+        if(testClicked.name ==="BDT" || testClicked.name ==="Registration Testing" ){
           
           processData = processData[processData.length-1];
           console.log(processData);
         }
-        let pushingData = {application: props.name, typeOfTest: testClicked.name, performedDate: (new Date('05 October 2011 14:48 UTC')).toISOString(), data: processData  }
+        let pushingData = {application: props.name, typeOfTest: testClicked.name, performedDate: (new Date()).toISOString(), data: processData  }
         data.push(pushingData);
         return data;
       });

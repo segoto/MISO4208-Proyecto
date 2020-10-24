@@ -16,7 +16,7 @@ router.get('/bdt-login', function (req, res, next) {
   fetch('http://localhost:3001/test-bdt-habitica-web')
     .then(() => {
       let rawData = fs.readFileSync(
-        path.resolve('.tmp/json/signup-to-habitica.json')
+        path.resolve('.tmp/json/login-into-habitica.json')
       )
       console.log(rawData);
       let results = JSON.parse(rawData)
@@ -29,7 +29,7 @@ router.get('/bdt-login', function (req, res, next) {
 
 router.get('/results-bdt-signup', (req, res, next) => {
   let rawData = fs.readFileSync(
-    path.resolve('.tmp/json/login-to-habitica.json')
+    path.resolve('.tmp/json/signup-to-habitica.json')
   )
   let results = JSON.parse(rawData)
   res.send(results)
