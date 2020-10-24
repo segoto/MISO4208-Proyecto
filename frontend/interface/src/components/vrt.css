@@ -1,0 +1,42 @@
+.image{
+    max-width: 300px;
+    max-height: 800px;
+}
+
+.report-vrt{
+    padding: 10px;
+}
+
+.report-vrt-row{
+    margin-top: 20px;
+}
+
+.col-image{
+    margin: 0 30px 0px 0px;
+    padding: 0;
+    max-width: 300px;
+}
+
+.box{
+    max-width: 200px;
+    min-width: 150px;
+}
+
+.col-data{
+    padding: 0;
+    max-width: 300px;
+}
+
+.title{
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.report-btn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.result-btn{
+    background: #00B7FF;
+}

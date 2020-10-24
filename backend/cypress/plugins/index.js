@@ -17,13 +17,11 @@
  */
 const fs = require('fs');
 var i = 1;
-const axiosScript = require('../../axiosScript');
+// const axiosScript = require('../../axiosScript');
 
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   on('after:screenshot', (details) => {
-
-        console.log(details);
 
         const newPath = './utils/mod_images/img'+i+'.png';
         i += 1;
@@ -41,10 +39,29 @@ module.exports = (on, config) => {
         })
     });
 
-  on('task', {
+    on('before:browser:launch', (browser, launchOptions) => {
+        if (browser.family === 'chromium' && browser.name !== 'electron') {
+            // in Chromium, preferences can exist in Local State, Preferences, or Secure Preferences
+            // via launchOptions.preferences, these can be acccssed as `localState`, `default`, and `secureDefault`
+
+            // for example, to set `somePreference: true` in Preferences:
+            launchOptions.preferences.default.intl = {accept_languages: "es"}
+
+            return launchOptions
+        }
+
+        if (browser.name === 'electron') {
+            // launchOptions.preferences is a `BrowserWindow` `options` object
+            //launchOptions.preferences = true
+
+            return launchOptions
+        }
+    });
+
+  /*on('task', {
         'getRegistrationData': () => {
             // CHANGED: return a promise so Cypress can wait for it
             return axiosScript.getRegistrationData();
         }
-    })
+    })*/
 }
