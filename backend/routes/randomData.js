@@ -9,10 +9,7 @@ const path = require('path')
 router.get('/bdt-login', function (req, res, next) {
   let fileContent = randomGenerator.generateRandomFile()
 
-  fs.writeFileSync(
-    'C:/Users/juseg/Documents/pruebas/MISO4208-Proyecto/backend/features/login/login.feature',
-    fileContent
-  )
+  fs.writeFileSync(path.resolve('features/login/login.feature'), fileContent)
 
   req.app.get('processing')()
 
@@ -21,12 +18,23 @@ router.get('/bdt-login', function (req, res, next) {
       let rawData = fs.readFileSync(
         path.resolve('.tmp/json/signup-to-habitica.json')
       )
+      console.log(rawData);
       let results = JSON.parse(rawData)
       res.send(results)
     })
     .catch((error) => {
       console.error(error)
     })
+})
+
+router.get('/results-bdt-signup', (req, res, next) => {
+  let rawData = fs.readFileSync(
+    path.resolve('.tmp/json/login-to-habitica.json')
+  )
+  let results = JSON.parse(rawData)
+  res.send(results)
+
+  req.app.get('processing')()
 })
 
 module.exports = router
