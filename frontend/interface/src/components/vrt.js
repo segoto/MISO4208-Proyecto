@@ -1,7 +1,5 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import {Container, Row, Col, Image} from 'react-bootstrap';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import './vrt.css';
 
 class Report extends React.Component{
@@ -60,7 +58,7 @@ class Vrt extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-        tests: props.results === undefined ? []:JSON.parse(props.results),
+        tests: props.results === undefined ? []:props.results,
         show: false
     }
   }
