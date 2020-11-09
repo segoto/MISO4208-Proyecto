@@ -18,6 +18,7 @@ router.get('/bdt-login', function (req, res, next) {
       let rawData = fs.readFileSync(
         path.resolve('.tmp/json/login-into-habitica.json')
       )
+      console.log(rawData);
       let results = JSON.parse(rawData)
       res.send(results)
     })

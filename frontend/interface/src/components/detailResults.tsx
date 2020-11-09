@@ -22,7 +22,7 @@ const DetailResults = (props: Props) => {
     } else {
       setIsVrt(false);
     }
-    if (props.row.typeOfTest === "BDT") {
+    if (props.row.typeOfTest === "BDT" || props.row.typeOfTest === "Registration Testing") {
       setIsBDT(true);
     } else {
       setIsBDT(false);

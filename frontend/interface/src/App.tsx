@@ -24,7 +24,7 @@ function App() {
     },
     {
       name: "Registration Testing",
-      route: "http://localhost:3001/test-bdt-habitica-web",
+      route: "http://localhost:3001/random-data/results-bdt-signup",
     },
     { name: "BDT", route: "http://localhost:3001/random-data/bdt-login" },
     { name: "VRT", route: "http://localhost:3001/vrt/hab_web" },
