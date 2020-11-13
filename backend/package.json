@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "test": "npx wdio run wdio.conf.js",
+    "mutode": "mutode ./habitica-web-project/habitica-develop/website/server/middlewares/auth.js"
   },
   "dependencies": {
     "@wdio/cli": "^6.5.2",
@@ -33,6 +35,10 @@
     "@wdio/sync": "^6.5.0",
     "cucumber": "^7.0.0-rc.0",
     "cypress": "^5.1.0",
-    "wdio-cucumberjs-json-reporter": "^2.0.2"
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1",
+    "mutode": "^1.4.2",
+    "wdio-cucumberjs-json-reporter": "^2.0.2",
+    "webpack-cli": "^4.2.0"
   }
 }
