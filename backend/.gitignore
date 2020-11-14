@@ -1,3 +1,7 @@
 node_modules/
 .env
 cypress/
+
+habitica-web-project/
+
+.mutode
