@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4c02d2f0-e216-43a0-a557-06c44cc2df61" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/vrt.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/vrt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/utils/vrt_MyExpenses.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/vrt_MyExpenses.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/interface/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/interface/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/vrt_Habitica.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/vrt_Habitica.cmd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +90,7 @@
       <workItem from="1605246501128" duration="723000" />
       <workItem from="1605249717108" duration="1604000" />
       <workItem from="1605320184966" duration="7292000" />
-      <workItem from="1605329015558" duration="1627000" />
+      <workItem from="1605329015558" duration="2236000" />
     </task>
     <servers />
   </component>
