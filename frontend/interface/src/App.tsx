@@ -37,9 +37,11 @@ function App() {
       name: 'Random Testing',
       route: 'http://localhost:3001/test-habitica-mobile',
     },
+    { name: 'VRT', route: 'http://localhost:3001/vrt/hab_movil' },
   ]
   const testMyExpensesMovil = [
     { name: 'Random Testing', route: 'http://localhost:3001/test-my-expenses' },
+    { name: 'VRT', route: 'http://localhost:3001/vrt/my_expenses' },
   ]
 
   return (

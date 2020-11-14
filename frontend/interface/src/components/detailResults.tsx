@@ -18,7 +18,6 @@ const DetailResults = (props: Props) => {
   useEffect(() => {
     if (props.row.typeOfTest === "VRT") {
       setIsVrt(true);
-      console.log(props.row.data, "detail");
     } else {
       setIsVrt(false);
     }
