@@ -3,7 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="4c02d2f0-e216-43a0-a557-06c44cc2df61" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/utils/vrt_Habitica.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/vrt_Habitica.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/diff_images/habitica_img1.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/diff_images/habitica_img1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/diff_images/habitica_img2.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/diff_images/habitica_img2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/diff_images/habitica_img3.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/diff_images/habitica_img3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/diff_images/habitica_img4.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/diff_images/habitica_img4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/diff_images/habitica_img5.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/diff_images/habitica_img5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/diff_images/myexpenses_img1.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/diff_images/myexpenses_img1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/diff_images/myexpenses_img2.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/diff_images/myexpenses_img2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/diff_images/myexpenses_img3.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/diff_images/myexpenses_img3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/diff_images/myexpenses_img4.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/diff_images/myexpenses_img4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/mod_images/habitica_img1.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/mod_images/habitica_img1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/mod_images/habitica_img2.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/mod_images/habitica_img2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/mod_images/habitica_img3.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/mod_images/habitica_img3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/mod_images/habitica_img4.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/mod_images/habitica_img4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/mod_images/habitica_img5.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/mod_images/habitica_img5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/mod_images/myexpenses_img1.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/mod_images/myexpenses_img1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/mod_images/myexpenses_img2.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/mod_images/myexpenses_img2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/mod_images/myexpenses_img3.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/mod_images/myexpenses_img3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/mod_images/myexpenses_img4.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/mod_images/myexpenses_img4.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +48,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Universidad/Semestre 8/Pruebas Automaticas/Cypress/cypress/integration/todoist_spec.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pruebas automatica/SimianArmy" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -90,7 +107,9 @@
       <workItem from="1605246501128" duration="723000" />
       <workItem from="1605249717108" duration="1604000" />
       <workItem from="1605320184966" duration="7292000" />
-      <workItem from="1605329015558" duration="2236000" />
+      <workItem from="1605329015558" duration="2640000" />
+      <workItem from="1605372044043" duration="768000" />
+      <workItem from="1605406572944" duration="357000" />
     </task>
     <servers />
   </component>
@@ -102,10 +121,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="542" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1605328592944" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605329242403">
+    <state x="549" y="167" width="742" height="489" key="FileChooserDialogImpl" timestamp="1605406934286">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605329242403" />
+    <state x="549" y="167" width="742" height="489" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605406934286" />
     <state width="1515" height="91" key="GridCell.Tab.0.bottom" timestamp="1603435449731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
